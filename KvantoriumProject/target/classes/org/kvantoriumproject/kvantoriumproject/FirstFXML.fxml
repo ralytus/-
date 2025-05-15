@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.kvantoriumproject.kvantoriumproject.FirstController"
+            prefWidth="1128" prefHeight="634">
+
+    <top>
+        <VBox spacing="10">
+            <ToolBar>
+                <Button text="Добавить" onAction="#dobavitPrivychku" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button text="Удалить" onAction="#udalitPrivychku" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            </ToolBar>
+            <Label text="Мои привычки" style="-fx-font-size: 16; -fx-padding: 5 10;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tablitsa">
+            <columns>
+                <TableColumn fx:id="nazvanieKol" text="Название" />
+                <TableColumn fx:id="chastotaKol" text="Повтор" />
+                <TableColumn fx:id="dataNachalaKol" text="Начало" />
+                <TableColumn fx:id="statusKol" text="Выполнено" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <CheckBox fx:id="vklyuchitUvedomleniya" text="Уведомления"
+                  style="-fx-padding: 10 15; -fx-font-size: 14;"/>
+    </bottom>
+
+    <padding>
+        <Insets top="10" right="15" bottom="10" left="15"/>
+    </padding>
+</BorderPane>
